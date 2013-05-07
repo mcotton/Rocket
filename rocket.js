@@ -16,3 +16,13 @@ RocketView = Backbone.View.extend({
 RocketCollection = Backbone.Collection.extend({
 
 });
+
+RocketRouter = Backbone.Router.extend({
+    initialize: function() {
+        this.bind('all', this.before_filter)
+    },
+
+    before_filter: function(route) {
+
+    }
+});
