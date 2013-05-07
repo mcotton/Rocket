@@ -16,4 +16,3 @@ RocketView = Backbone.View.extend({
 RocketCollection = Backbone.Collection.extend({
 
 });
-
