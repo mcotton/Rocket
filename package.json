@@ -1,0 +1,22 @@
+{
+  "name": "Rocket",
+  "version": "0.0.1",
+  "description": "Extensions for backbone.js",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcotton/Rocket.git"
+  },
+  "author": "mcotton",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mcotton/Rocket/issues"
+  },
+  "dependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}
