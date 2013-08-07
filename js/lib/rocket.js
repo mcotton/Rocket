@@ -51,7 +51,7 @@ Rocket.CollectionView = Rocket.BaseView.extend({
         var data
 
         if(this.collection) {
-            data = { items: this.collection }
+            data = { items: this.collection.models }
         }
 
         return data
