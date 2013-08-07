@@ -38,7 +38,7 @@ Rocket.ModelView = Rocket.BaseView.extend({
         var data
 
         if(this.model) {
-            data = { item: his.model }
+            data = { item: this.model }
         }
 
         return data
