@@ -14,7 +14,17 @@ Rocket.Model = Backbone.Model.extend({
 });
 
 Rocket.BaseView = Backbone.View.extend({
+    constructor: function() {
+        Backbone.View.prototype.constructor.apply(this, arguments)
 
+        this.buildtemplateCache()
+    },
+    buildtemplateCache: function() {
+        var proto = Object.getPrototypeOf(this)
+
+        if(proto.templateCache) { return; }
+        proto.templateCache = _.template(this.template)
+    },
     render: function() {
         var data
 
@@ -22,7 +32,7 @@ Rocket.BaseView = Backbone.View.extend({
             data = this.serializeData()
         }
 
-        var renderedHTML = _.template(this.template, data)
+        var renderedHTML = this.templateCache(data)
         this.$el.html(renderedHTML)
 
         if(this.onRender) {
