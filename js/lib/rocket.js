@@ -70,7 +70,12 @@ Rocket.CollectionView = Rocket.BaseView.extend({
 
 
 Rocket.Collection = Backbone.Collection.extend({
-
+    customSortBy: function(attribute, reverse) {
+        this.comparator = function(e)  {
+            return (reverse) ?  -1 * e.get(attribute) : e.get(attribute);
+        }
+        this.sort();
+    }
 });
 
 Rocket.Router = Backbone.Router.extend({
